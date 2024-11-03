@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Header from './components/components/Header';
-import MainContent from './components/components/MainContent';
-import Footer from './components/components/Footer';
+import Header from './Header';
+import MainContent from './MainContent';
+import Footer from './Footer';
 import WelcomeMessage from './components/WelcomeMessage'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
