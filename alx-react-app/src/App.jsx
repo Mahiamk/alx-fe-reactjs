@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Header from './components/SetOne/Header';
-import MainContent from './components/SetOne/MainContent';
-import Footer from './components/SetOne/Footer';
+import Header from './components/components/Header';
+import MainContent from './components/components/MainContent';
+import Footer from './components/components/Footer';
 import WelcomeMessage from './components/WelcomeMessage'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -18,6 +18,8 @@ function App() {
         <Header />
         <MainContent />
         <Footer />
+      </div>
+      <div>
         <WelcomeMessage />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
