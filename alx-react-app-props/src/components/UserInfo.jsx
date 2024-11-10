@@ -1,12 +1,16 @@
-import React from 'react'
-import UserDetails from './UserDetails';
+import React, { useContext } from 'react';
+import UserContext from '../UserContext';
 
-function UserInfo() {
+const UserProfile = () => {
+  const userData = useContext(UserContext);
+
   return (
-    <UserDetails />
-
+    <div>
+      <h2>User Profile</h2>
+      <p>Name: {userData.name}</p>
+      <p>Email: {userData.email}</p>
+    </div>
   );
-}
+};
 
-export default UserInfo;
-
+export default UserProfile;
