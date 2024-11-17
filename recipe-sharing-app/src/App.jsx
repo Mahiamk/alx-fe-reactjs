@@ -5,8 +5,8 @@ import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
 import SearchBar from './components/SearchBar';
-import FavoritesList from './components/FavoriteList';
-import RecommendationsList from './components/RecommendationList';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 
 const App = () => {
@@ -50,6 +50,17 @@ const App = () => {
           </div>
         ))}
       </div>
+      <Router>
+      <div className="App">
+        <h1>Recipe Store</h1>
+        <AddRecipeForm />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+        </Routes>
+      </div>
+    </Router>
+
       <RecipeList />
       <AddRecipeForm />
       <RecipeDetails />
