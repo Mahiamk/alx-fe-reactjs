@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRecipeStore } from '../useRecipeStore'
+import { useRecipeStore } from './recipeStore'
 
 const EditRecipeForm = ({ recipe }) => {
   const [title, setTitle] = useState(recipe.title);
@@ -10,7 +10,6 @@ const EditRecipeForm = ({ recipe }) => {
     event.preventDefault();
     const updatedRecipe = { ...recipe, title, description };
     updateRecipe(updatedRecipe);
-    // Optionally, redirect back to recipe details page
   };
 
   return (
