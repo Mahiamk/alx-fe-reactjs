@@ -4,17 +4,29 @@ const RegistrationForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({}); // Manage error messages
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      setError("All fields are required.");
+    const newErrors = {};
+
+    if (!username) {
+      newErrors.username = "Username is required.";
+    }
+    if (!email) {
+      newErrors.email = "Email is required.";
+    }
+    if (!password) {
+      newErrors.password = "Password is required.";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
-    setError("");
+    setErrors({});
     console.log("Form submitted:", { username, email, password });
 
     alert("User Registered Successfully!");
@@ -34,10 +46,13 @@ const RegistrationForm = () => {
             type="text"
             id="username"
             name="username"
-            value={username} 
+            value={username} // Controlled value
             onChange={(e) => setUsername(e.target.value)} // Update state
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
           />
+          {errors.username && (
+            <div style={{ color: "red", marginTop: "5px" }}>{errors.username}</div>
+          )}
         </div>
 
         <div style={{ marginBottom: "10px" }}>
@@ -46,10 +61,13 @@ const RegistrationForm = () => {
             type="email"
             id="email"
             name="email"
-            value={email} 
+            value={email} // Controlled value
             onChange={(e) => setEmail(e.target.value)} // Update state
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
           />
+          {errors.email && (
+            <div style={{ color: "red", marginTop: "5px" }}>{errors.email}</div>
+          )}
         </div>
 
         <div style={{ marginBottom: "10px" }}>
@@ -58,15 +76,14 @@ const RegistrationForm = () => {
             type="password"
             id="password"
             name="password"
-            value={password} 
+            value={password} // Controlled value
             onChange={(e) => setPassword(e.target.value)} // Update state
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
           />
+          {errors.password && (
+            <div style={{ color: "red", marginTop: "5px" }}>{errors.password}</div>
+          )}
         </div>
-
-        {error && (
-          <div style={{ color: "red", marginBottom: "10px" }}>{error}</div>
-        )}
 
         <button
           type="submit"
