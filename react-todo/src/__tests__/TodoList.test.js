@@ -1,4 +1,3 @@
-// src/__tests__/TodoList.test.js
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
@@ -26,11 +25,9 @@ describe("TodoList Component", () => {
     render(<TodoList />);
     const todoItem = screen.getByText("Learn React");
 
-    // Toggle to completed
     fireEvent.click(todoItem);
     expect(todoItem).toHaveStyle("text-decoration: line-through");
 
-    // Toggle back to not completed
     fireEvent.click(todoItem);
     expect(todoItem).not.toHaveStyle("text-decoration: line-through");
   });
