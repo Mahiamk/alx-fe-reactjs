@@ -7,10 +7,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-        <h1>React Query Demo: Fetching Posts</h1>
-        <PostsComponent />
-      </div>
+      <PostsComponent />
     </QueryClientProvider>
   );
 }
