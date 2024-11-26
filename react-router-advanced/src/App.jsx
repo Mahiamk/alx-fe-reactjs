@@ -8,6 +8,7 @@ function App() {
   const isAuthenticated = false; // Simulate authentication status
 
   return (
+    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/blog/:id" element={<BlogPost />} />
@@ -20,6 +21,7 @@ function App() {
         }
       />
     </Routes>
+    
   );
 }
 export default App;
