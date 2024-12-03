@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chicken-tikka-masala-500x500.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Doro Wot",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a spicy, onion, smooth buttery & creamy tomato based gravy with Injera.",
+    "image": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/179374/Smoke-n-Ash-Smoked-Doro-Wat-1.jpg?ixlib=react-9.9.0&ar=1%3A1&fit=crop&w=3840&auto=format"
+  },
+  {
+    "id": 4,
+    "title": "Caccabsaa",
+    "summary": "Nyaata oromootaa",
+    "image": "https://i.ytimg.com/vi/0tVWXVQZcVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCMyBlKF4ygidLfrrzoihV1DG_YOg"
+  }
+
+]
+
