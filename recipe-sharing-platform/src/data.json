@@ -2,27 +2,78 @@
   {
     "id": 1,
     "title": "Spaghetti Carbonara",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pancetta",
+      "Parmesan",
+      "Garlic",
+      "Black Pepper"
+    ],
+    "instructions": [
+      "Cook the pasta.",
+      "Fry pancetta.",
+      "Mix eggs and cheese.",
+      "Combine everything."
+    ],
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
     "image": "https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg"
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "ingredients": [
+      "Chicken",
+      "Fettuccine",
+      "Heavy Cream",
+      "Parmesan",
+      "Garlic",
+      "Butter"
+    ],
+    "instructions": [
+      "Cook the pasta.",
+      "Sauté chicken.",
+      "Mix with cream and cheese."
+    ],
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato-based gravy.",
     "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chicken-tikka-masala-500x500.jpg"
   },
   {
     "id": 3,
     "title": "Doro Wot",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a spicy, onion, smooth buttery & creamy tomato based gravy with Injera.",
+    "ingredients": [
+      "Chicken",
+      "Grinded Paper with ingredients",
+      "Butter",
+      "Onion",
+      "Garlic",
+      "Oil"
+    ],
+    "instructions": [
+      "Wash the chicken with hot water.",
+      "Boil the water and then add ingredients like paper (spicy), butter, oil, onion, and garlic.",
+      "Mix all the ingredients until they're cooked.",
+      "Add some water, then add the cooked chicken into it.",
+      "Wait for a few minutes or an hour for it to cook."
+    ],
+    "summary": "Chunks of grilled chicken (tikka) cooked in a spicy, onion, smooth buttery & creamy tomato-based gravy with Injera.",
     "image": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/179374/Smoke-n-Ash-Smoked-Doro-Wat-1.jpg?ixlib=react-9.9.0&ar=1%3A1&fit=crop&w=3840&auto=format"
   },
   {
     "id": 4,
     "title": "Caccabsaa",
+    "ingredients": [
+      "Flour",
+      "Water",
+      "Butter",
+      "Spicy"
+    ],
+    "instructions": [
+      "Cook the flour by mixing with water on the oven.",
+      "Grind the cooked Kitta into pieces.",
+      "Boil butter with spices and mix with the Kitta."
+    ],
     "summary": "Nyaata oromootaa",
     "image": "https://i.ytimg.com/vi/0tVWXVQZcVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCMyBlKF4ygidLfrrzoihV1DG_YOg"
   }
-
 ]
-
