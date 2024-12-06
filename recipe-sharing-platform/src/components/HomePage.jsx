@@ -5,10 +5,23 @@ const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(()=>{
     const fetchRecipes=()=>{
-      setRecipes(recipeData);
+      const savedRecipes = localStorage.getItem("recipes");
+      const localRecipes = savedRecipes ? JSON.parse(savedRecipes) : [];
+      const allRecipes =[...recipeData, ...localRecipes]
+      setRecipes(allRecipes);
     };
     fetchRecipes();
   },[]);
+
+  const deleteRecipe = (id) => {
+    const updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
+    setRecipes(updatedRecipes);
+
+    const localRecipes = updatedRecipes.filter(recipe =>
+      !recipeData.some(staticRecipe => staticRecipe.id === recipe.id)
+    );
+    localStorage.setItem("recipes", JSON.stringify(localRecipes));
+  };
 
 return (
   <div className="p-4 max-w-7xl mx-auto">
@@ -29,6 +42,9 @@ return (
           <Link to={`/recipe/${recipe.id}`}className="text-blue-600 mt-4 inline-block hover:underline font-semibold">
             View Recipe
           </Link>
+          <button onClick={() => deleteRecipe(recipe.id)} className="text-red-600 hover:underline font-semibold">
+            Delete
+          </button>  
         </div>
       ))}
     </div>
