@@ -1,4 +1,4 @@
-const GITHUB_API_KEY = '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';
+const GITHUB_API_KEY = 'your-personal-access-token';
 
 
 const headers = {
