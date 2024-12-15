@@ -6,7 +6,7 @@ const GitHubUserProfile = ({ username }) => {
   const [error, setError] = useState(null); // Handle errors
   const [loading, setLoading] = useState(false); // Track loading state
 
-  const GITHUB_API_KEY = "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";  // Replace with your actual key
+  const GITHUB_API_KEY = "your-personal-access-token";  // Replace with your actual key
 
   
   const fetchGitHubUser = async (username) => {
