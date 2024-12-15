@@ -1,25 +1,27 @@
-// src/components/Search.jsx
 import React, { useState } from 'react';
 import { fetchUserData } from '../services/githubService'; // Import the fetchUserData function
 
 const Search = () => {
   const [username, setUsername] = useState(''); // Store the search input
+  const [location, setLocation] = useState(''); // Store location input
+  const [minRepos, setMinRepos] = useState(0); // Store minimum repositories input
   const [userData, setUserData] = useState(null); // Store the fetched user data
   const [loading, setLoading] = useState(false); // Handle loading state
   const [error, setError] = useState(null); // Handle error state
 
   const handleSearch = async (e) => {
     e.preventDefault(); // Prevent page reload on form submit
-    if (!username) return; // Don't do anything if the username is empty
+    if (!username && !location && minRepos <= 0) return; // Don't do anything if the username is empty or no filters are provided
+
     setLoading(true); // Start loading
     setError(null); // Reset error state
     setUserData(null); // Clear previous results
 
     try {
-      const data = await fetchUserData(username); // Fetch the user data
+      const data = await fetchUserData(username, location, minRepos); // Fetch the user data
       setUserData(data); // Set user data
     } catch {
-      setError("Looks like we cant find the user"); // Set error message if something goes wrong
+      setError("Looks like we can't find the user"); // Set error message if something goes wrong
     } finally {
       setLoading(false); // Stop loading
     }
@@ -34,6 +36,20 @@ const Search = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)} // Update username on input change
           placeholder="Enter GitHub username"
+          style={styles.input}
+        />
+        <input
+          type="text"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)} // Update location on input change
+          placeholder="Enter location (optional)"
+          style={styles.input}
+        />
+        <input
+          type="number"
+          value={minRepos}
+          onChange={(e) => setMinRepos(e.target.value)} // Update minimum repositories on input change
+          placeholder="Minimum repositories"
           style={styles.input}
         />
         <button type="submit" style={styles.button}>
@@ -52,9 +68,12 @@ const Search = () => {
             style={styles.avatar}
           />
           <h2>{userData.name || userData.login}</h2>
-          <p>{userData.bio || "No bio available"}</p>
+          <p>{userData.bio || 'No bio available'}</p>
           <p>
             <strong>Public Repos:</strong> {userData.public_repos}
+          </p>
+          <p>
+            <strong>Location:</strong> {userData.location || 'No location available'}
           </p>
           <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
             Visit Profile
@@ -80,6 +99,7 @@ const styles = {
     fontSize: '16px',
     width: '300px',
     marginRight: '10px',
+    marginBottom: '10px',
   },
   button: {
     padding: '10px 20px',
