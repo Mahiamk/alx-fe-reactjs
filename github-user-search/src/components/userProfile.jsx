@@ -8,7 +8,7 @@ const GitHubUserProfile = ({ username }) => {
 
   const GITHUB_API_KEY = "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";  // Replace with your actual key
 
-  // Fetch GitHub user data based on the provided username
+  
   const fetchGitHubUser = async (username) => {
     setLoading(true);  // Start loading
     setError(null);    // Reset error state
